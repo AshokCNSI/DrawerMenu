@@ -1,0 +1,43 @@
+<ion-view>
+<div class="bar bar-header">
+  <button class="button icon ion-navicon"></button>
+  <h1 class="title">Header Buttons</h1>
+  <button class="button">Edit</button>
+</div>
+  <ion-content class="padding">
+  <div class="list">
+  <label class="item item-input">
+    <i class="icon ion-search placeholder-icon"></i>
+    <input type="text" placeholder="Search">
+  </label>
+</div>
+<div class="list">
+<label class="item item-input item-select">
+  <div class="input-label">
+      Select Category
+  </div>
+  <select placeholder="Category" ng-model="category" class="reset">
+  <option value="" ng-repeat="category in categoryData track by $index">{{category.categoryName}}</option>
+  </select>
+</label>
+</div>
+<div class="list">
+<label class="item item-input item-select">
+  <div class="input-label">
+      Select Sub-Category
+  </div>
+  <select placeholder="Category" ng-model="category" class="reset">
+  <option value="" ng-repeat="category in categoryData track by $index">{{category.categoryName}}</option>
+  </select>
+</label>
+</div>
+<div class="list">
+<button class="button button-block button-positive">
+  Book Now
+</button>
+</div>
+<div>
+</div>
+
+  </ion-content>
+</ion-view>
