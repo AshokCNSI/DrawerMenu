@@ -1,0 +1,31 @@
+<ion-modal-view style="background:url(&apos;img/login.jpg&apos;);background-size: cover;">
+  <div class="bar bar-header" style="background: none;">
+	<button class="button button-icon icon ion-navicon" ng-click="openDrawer()" style="color: wheat;"></button>
+	<div class="h1 title" style="color: wheat;">Login</div>
+  </div>
+  <ion-content style="margin-top:45%;">
+    <form ng-submit="doLogin()">
+      <div class="list list-inset" style="margin: 20px 35px;">
+		<label class="item item-input">
+			<i class="ion-email"></i>&nbsp;&nbsp;
+			<input type="text" placeholder="Email ID">
+		</label>
+	  </div>
+	  <div class="list list-inset" style="margin: 20px 35px;">
+		<label class="item item-input">
+			<i class="ion-ios-unlocked"></i>&nbsp;&nbsp;
+			<input type="password" placeholder="Password">
+		</label>
+	  </div>
+	  <div class="" style="margin: 20px 35px;">
+	  <div class="row">
+		<div class="col" style="color: wheat;"><input type="checkbox" value="checked" checked>&nbsp;&nbsp;Remember Me</div>
+		<div class="col" style="text-align:right;color: wheat;">Forget Password?</div>
+	  </div>
+	  </div>
+	  <div class="padding has-header" style="margin: 20px 35px;">
+		<button class="button button-block button-dark" style="background-color: #194A45;">Login</button>
+	  </div>
+    </form>
+  </ion-content>
+</ion-modal-view>

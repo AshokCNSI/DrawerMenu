@@ -1,0 +1,77 @@
+<ion-view cache-view="false">
+<ion-header-bar class="bar bar-header headerColor">
+  <button class="button button-icon icon ion-navicon" ng-click="openDrawer()"></button>
+  <div class="h1 title">Home</div>
+</ion-header-bar>
+  <ion-content class="padding">
+  <div class="list">
+  <label class="item item-input">
+    <i class="icon ion-search placeholder-icon"></i>
+    <input type="text" placeholder="Search">
+  </label>
+</div>
+<ul class="bxslider">
+  <li><img src="img/ben.png" title="Funky roots" /></li>
+  <li><img src="img/ben.png" title="The long and winding road" /></li>
+  <li><img src="img/ben.png" title="Happy trees" /></li>
+</ul>
+<div class="list">
+<label class="item item-input item-select">
+  <div class="input-label">
+      Select Category
+  </div>
+  <select placeholder="Category" ng-model="category" class="reset">
+  <option value="" ng-repeat="category in categoryData track by $index">{{category.categoryName}}</option>
+  </select>
+</label>
+</div>
+<div class="list">
+<label class="item item-input item-select">
+  <div class="input-label">
+      Select Sub-Category
+  </div>
+  <select placeholder="Category" ng-model="category" class="reset">
+  <option value="" ng-repeat="category in categoryData track by $index">{{category.categoryName}}</option>
+  </select>
+</label>
+</div>
+<div class="list">
+<button class="button button-block button-positive">
+  Book Now
+</button>
+</div>
+<div class="list" style="border: 1px solid;margin: 15px;">
+<div class="row serviceIcon">
+  <div class="col col-50">
+	<i class="fa fa-cloud w3-xxxlarge"></i><br>
+	Pest Control
+  </div>
+  <div class="col col-50">
+	<i class="fa fa-home w3-xxxlarge"></i><br>
+	Pest Control  
+  </div>
+</div>
+<div class="row serviceIcon">
+  <div class="col col-50">
+	<i class="fa fa-truck w3-xxxlarge"></i><br>
+	Pest Control
+  </div>
+  <div class="col col-50">
+	<i class="fa fa-car w3-xxxlarge"></i><br>
+	Pest Control  
+  </div>
+</div>
+<div class="row serviceIcon">
+  <div class="col col-50">
+	<i class="fa fa-plane w3-xxxlarge"></i><br>
+	Pest Control
+  </div>
+  <div class="col col-50">
+	<i class="fa fa-search w3-xxxlarge"></i><br>
+	Pest Control  
+  </div>
+</div>
+</div>
+
+  </ion-content>
+</ion-view>

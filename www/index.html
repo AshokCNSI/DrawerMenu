@@ -18,54 +18,54 @@
 	<script src="js/ionic.contrib.drawer.js"></script>
     <!-- ionic/angularjs js -->
     <!-- cordova script (this will be a 404 during development) -->
+	<script src="js/ng-cordova.min.js"></script>
     <script src="cordova.js"></script>
 
     <!-- your app's js -->
+	<script src="js/jquery-1.10.2.js"></script>
+	
     <script src="js/app.js"></script>
     <script src="js/controllers.js"></script>
     <script src="js/services.js"></script>
+	
+	<script src="js/jquery.bxslider.min.js"></script>
+	<link rel="stylesheet" href="css/jquery.bxslider.css" type="text/css" media="screen">
+	
+	<link rel="stylesheet" href="css/w3.css">
+	<link rel="stylesheet" href="css/font-awesome.min.css">
+
   </head>
   <body ng-app="starter">
-    <!--
-      The nav bar that will be updated as we navigate between views.
-    -->
-    <ion-nav-bar class="bar-stable">
-      <ion-nav-back-button>
-      </ion-nav-back-button>
-    </ion-nav-bar>
-    <!--
-      The views will be rendered in the <ion-nav-view> directive below
-      Templates are in the /templates folder (but you could also
-      have templates inline in this html file if you'd like).
-    -->
     <ion-nav-view>
-	<drawer side="left" style="width:75%;background:url('img/side4.jpg');background-size: cover;">
-      <ion-content class="bet-type-list" style="top: 0px; ">
+	<drawer side="left" class="sideMenu" style="display:block;width:75%;background:url(&apos;img/side.jpg&apos;);background-size: cover;">
+      <ion-content class="bet-type-list" style="top: 0px; " ng-controller="drawerController">
         <ion-list>
-        <ion-item menu-close="" class="sideMenu">
-		   <div class="item item-avatar sideMenu" style="border-bottom: 1px solid;">
-			<img src="img/138926-200.png">
-			<h2 style="font-family: cursive;font-size: 18px;font-weight: bold;">Join ServiceCart</h2>
-			<p style="color:white;text-align:center;"><a ng-click="Regsitration()" style="color:white;">Sign Up</a> or <a ng-click="login()" style="color:white;">Login</a></p>
-		  </div>
+        <div class="list card" style="background: none;">
+			<div class="item item-avatar sideMenu">
+				<img src="img/138926-200.png">
+				<div style="text-align:center;">
+				<h2 style="font-size: 18px;font-weight: bold;">Join ServiceCart</h2>
+				<p style="color:white;"><a ng-click="passView(&apos;registration&apos;)" style="color:white;">Sign Up</a> or <a ng-click="passView(&apos;login&apos;)" style="color:white;">Login</a></p>
+				</div>
+			</div>
+		</div>
+        <ion-item menu-close="" href="javascript:void(0)" ng-click="passView(&apos;home&apos;)" class="sideMenu">
+           <i class="ion-ios-home-outline"></i><span style="padding-left:18px;">Home</span>
         </ion-item>
-        <ion-item menu-close="" class="sideMenu">
-           <i class="ion-ios-home-outline"></i>&nbsp;&nbsp;&nbsp;Home
+		<ion-item menu-close="" href="javascript:void(0)" ng-click="passView(&apos;bookingHistory&apos;)" class="sideMenu">
+           <i class="ion-ios-bookmarks-outline"></i><span style="padding-left:18px;">Booking History</span>
         </ion-item>
-		<ion-item menu-close="" class="sideMenu">
-           <i class="ion-ios-bookmarks-outline"></i>&nbsp;&nbsp;&nbsp;Booking History
+        <ion-item menu-close="" href="javascript:void(0)" ng-click="passView(&apos;offerCoupons&apos;)" class="sideMenu">
+           <i class="ion-ios-gear-outline"></i><span style="padding-left:18px;">Offer Coupons</span>
         </ion-item>
-        <ion-item menu-close="" class="sideMenu">
-           <i class="ion-ios-gear-outline"></i>&nbsp;&nbsp;&nbsp;Offer Coupons
+        <ion-item menu-close="" href="javascript:void(0)" ng-click="passView(&apos;referEarn&apos;)" class="sideMenu">
+          <i class="ion-ios-personadd-outline"></i><span style="padding-left:18px;">Refer &amp; Earn</span>
         </ion-item>
-        <ion-item menu-close="" class="sideMenu">
-          <i class="ion-ios-personadd-outline"></i>&nbsp;&nbsp;&nbsp;Refer &amp; Earn
+        <ion-item menu-close="" href="javascript:void(0)" ng-click="passView(&apos;helpFaq&apos;)" class="sideMenu">
+          <i class="ion-ios-help-outline"></i><span style="padding-left:18px;">Help &amp; FAQ</span>
         </ion-item>
-        <ion-item menu-close="" class="sideMenu">
-          <i class="ion-ios-help-outline"></i>&nbsp;&nbsp;&nbsp;Help &amp; FAQ
-        </ion-item>
-		<ion-item menu-close="" class="sideMenu">
-          <i class="ion-social-reddit-outline"></i>&nbsp;&nbsp;&nbsp;Contact Us
+		<ion-item menu-close="" href="javascript:void(0)" ng-click="passView(&apos;contactUs&apos;)" class="sideMenu">
+          <i class="ion-social-reddit-outline"></i><span style="padding-left:18px;">Contact Us</span>
         </ion-item>
         </ion-list>
       </ion-content>

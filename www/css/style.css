@@ -4,5 +4,20 @@
 background:none;
 border: none;
 color : white;
-font-family: cursive;font-size: 18px;
+font-size: 18px;
+}
+
+.item-complex .item-content, .item-radio .item-content
+{
+background : none;
+}
+
+.serviceIcon{
+text-align : center;
+padding : 20px;
+}
+
+.headerColor{
+background: cadetblue;
+border : none;
 }
